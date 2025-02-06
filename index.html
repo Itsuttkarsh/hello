@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposal for Vidya</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: pink;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        h1 {
+            color: red;
+            font-size: 36px;
+        }
+        .heart {
+            font-size: 100px;
+            color: red;
+        }
+        .btn-container {
+            margin-top: 20px;
+        }
+        .btn {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: green;
+            color: white;
+        }
+        .no {
+            background-color: red;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vidya, will you be my valantine ❤️</h1>
+        <div class="heart">💖</div>
+        <div class="btn-container">
+            <button class="btn yes" onclick="yesResponse()">Yes</button>
+            <button class="btn no" id="noButton" onmouseover="moveButton()">No</button>
+        </div>
+        <p id="message" style="font-size: 24px; color: green; display: none;">Yay! You made me the happiest person! ❤️</p>
+    </div>
+    <script>
+        function yesResponse() {
+            document.getElementById("message").style.display = "block";
+        }
+
+        function moveButton() {
+            var x = Math.random() * window.innerWidth * 0.6;
+            var y = Math.random() * window.innerHeight * 0.6;
+            document.getElementById("noButton").style.left = x + "px";
+            document.getElementById("noButton").style.top = y + "px";
+        }
+    </script>
+</body>
+</html>
